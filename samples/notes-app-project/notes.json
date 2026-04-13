@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Welcome to Notes CLI",
+    "category": "workshop",
+    "body": "Use 'dotnet run -- list' to explore the sample data.",
+    "createdAtUtc": "2026-04-13T09:00:00Z",
+    "isArchived": false
+  },
+  {
+    "id": 2,
+    "title": "Review demo prompts",
+    "category": "demo",
+    "body": "Ask Copilot how Program.cs and NoteStore.cs work together.",
+    "createdAtUtc": "2026-04-13T09:15:00Z",
+    "isArchived": false
+  },
+  {
+    "id": 3,
+    "title": "Archive after the session",
+    "category": "ops",
+    "body": "This note starts archived so the --all flag has something to show.",
+    "createdAtUtc": "2026-04-13T09:30:00Z",
+    "isArchived": true
+  }
+]

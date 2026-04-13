@@ -107,16 +107,15 @@ cd ../..
 /share
 ```
 
-## 12. Use a built-in agent
+## 12. Use the built-in review flow
 
 ```bash
-copilot --agent enterprise-code-reviewer
+copilot
 ```
 
 ```text
-/agent
-Review @samples/notes-app-project/Program.cs
-Review @samples/notes-app-project/NoteStore.cs
+/review
+Review the current changes in @samples/notes-app-project/Program.cs and @samples/notes-app-project/NoteStore.cs
 ```
 
 ## 13. Create a project agent

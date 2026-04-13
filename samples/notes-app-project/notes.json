@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Welcome to Notes CLI",
     "category": "workshop",
-    "body": "Use 'dotnet run -- list' to explore the sample data.",
+    "body": "Use \u0027dotnet run -- list\u0027 to explore the sample data.",
     "createdAtUtc": "2026-04-13T09:00:00Z",
     "isArchived": false
   },

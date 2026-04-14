@@ -97,7 +97,23 @@ dotnet run -- search archive --all
 cd ../..
 ```
 
-## 11. Useful session commands to demo
+## 11. Showcase `/sessions` and `/fleet`
+
+```text
+/sessions
+Show my recent sessions for this repository
+Open the session where we added search to the notes app
+```
+
+```text
+/fleet
+Onboard me to this repository. Use multiple agents to inspect the main files in parallel and summarize the architecture, key commands, and where I should start.
+/fleet Scan @samples/notes-app-project/ and split the work across agents: one agent reviews Program.cs, one reviews NoteStore.cs, and one reviews the tests. Then give me a concise repo walkthrough.
+```
+
+These are good to demo together: `/sessions` shows continuity across prior work, while `/fleet` is a strong repository-onboarding example because it can parallelize exploration across multiple files and agents.
+
+## 12. Useful session commands to demo
 
 ```text
 /tasks
@@ -107,7 +123,7 @@ cd ../..
 /share
 ```
 
-## 12. Use the built-in review flow
+## 13. Use the built-in review flow
 
 ```bash
 copilot
@@ -118,7 +134,7 @@ copilot
 Review the current changes in @samples/notes-app-project/Program.cs and @samples/notes-app-project/NoteStore.cs
 ```
 
-## 13. Create a project agent
+## 14. Create a project agent
 
 ```bash
 mkdir -p .github/agents
@@ -152,7 +168,7 @@ Review @samples/notes-app-project/Program.cs
 Review @samples/notes-app-project/NoteStore.cs for C# code quality issues
 ```
 
-## 14. Use skills to generate and improve tests
+## 15. Use skills to generate and improve tests
 
 ```text
 /skills
@@ -190,7 +206,7 @@ dotnet test
 cd ../..
 ```
 
-## 15. Connect MCP servers with `/mcp add`
+## 16. Connect MCP servers with `/mcp add`
 
 ```text
 /mcp
@@ -208,7 +224,7 @@ Then verify what is loaded:
 /env
 ```
 
-## 16. Connect MCP servers with config
+## 17. Connect MCP servers with config
 
 Create `.mcp.json` in the repo root:
 
@@ -238,7 +254,7 @@ Then restart Copilot:
 /env
 ```
 
-## 17. MCP prompts to demo
+## 18. MCP prompts to demo
 
 ```text
 Find the current docs for xUnit fixtures and summarize the main patterns
@@ -247,7 +263,7 @@ Go to the Playwright docs homepage and summarize what it can do
 Use Context7 to get the latest ASP.NET Core docs for dependency injection
 ```
 
-## 18. Extra commands worth showing
+## 19. Extra commands worth showing
 
 ```text
 /init

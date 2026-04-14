@@ -3,8 +3,8 @@
 ## 1. Clone the repo
 
 ```bash
-git clone https://github.com/github/copilot-cli-for-beginners
-cd copilot-cli-for-beginners
+git clone https://github.com/BlackDante/github-copilot-dev-days
+cd github-copilot-dev-days
 ```
 
 ## 2. Install Copilot CLI
@@ -58,7 +58,17 @@ cd ../..
 !cd samples/notes-app-project && dotnet run -- list
 ```
 
-## 8. Ask about code with file context
+## 8. Explain the permissions model
+
+```text
+/allow-all
+/add-dir
+/list-dirs
+/cwd
+/reset-allowed-tools
+```
+
+## 9. Ask about code with file context
 
 ```text
 What does @samples/notes-app-project/Program.cs do?
@@ -67,7 +77,7 @@ What does @samples/notes-app-project/Program.cs do?
 @samples/notes-app-project/Program.cs @samples/notes-app-project/NoteStore.cs How do they work together?
 ```
 
-## 9. Run in non-interactive mode
+## 10. Run in non-interactive mode
 
 ```bash
 copilot -p "How do I read a JSON file in C#?"
@@ -75,7 +85,14 @@ copilot --allow-all -p "List all functions in @samples/notes-app-project/Program
 copilot -p "Review @samples/notes-app-project/NoteStore.cs and suggest 3 improvements"
 ```
 
-## 10. Plan and implement a feature
+## 11. Use `/research` before implementation
+
+```text
+/research
+Research the best approach for input validation in a small C# CLI app before we implement search. Compare 2-3 practical options, explain tradeoffs, and recommend the simplest workshop-friendly approach.
+```
+
+## 12. Plan and implement a feature
 
 ```bash
 copilot --plan
@@ -97,7 +114,7 @@ dotnet run -- search archive --all
 cd ../..
 ```
 
-## 11. Showcase `/sessions` and `/fleet`
+## 13. Showcase `/sessions` and `/fleet`
 
 ```text
 /sessions
@@ -111,9 +128,16 @@ Onboard me to this repository. Use multiple agents to inspect the main files in 
 /fleet Scan @samples/notes-app-project/ and split the work across agents: one agent reviews Program.cs, one reviews NoteStore.cs, and one reviews the tests. Then give me a concise repo walkthrough.
 ```
 
-These are good to demo together: `/sessions` shows continuity across prior work, while `/fleet` is a strong repository-onboarding example because it can parallelize exploration across multiple files and agents.
+## 14. Rename the current session
 
-## 12. Useful session commands to demo
+```text
+/rename
+Workshop demo - notes app search feature
+```
+
+This is useful before sharing or revisiting a session later.
+
+## 15. Useful session commands to demo
 
 ```text
 /tasks
@@ -123,7 +147,7 @@ These are good to demo together: `/sessions` shows continuity across prior work,
 /share
 ```
 
-## 13. Use the built-in review flow
+## 16. Use the built-in review flow
 
 ```bash
 copilot
@@ -134,7 +158,18 @@ copilot
 Review the current changes in @samples/notes-app-project/Program.cs and @samples/notes-app-project/NoteStore.cs
 ```
 
-## 14. Create a project agent
+## 17. Rewind the last turn
+
+```text
+Add a temporary `stats` command to @samples/notes-app-project/Program.cs that prints the total number of notes and archived notes.
+Update @samples/notes-app-project/NoteStore.cs if needed to support it.
+```
+
+```text
+/rewind
+```
+
+## 18. Create a project agent
 
 ```bash
 mkdir -p .github/agents
@@ -168,7 +203,7 @@ Review @samples/notes-app-project/Program.cs
 Review @samples/notes-app-project/NoteStore.cs for C# code quality issues
 ```
 
-## 15. Use skills to generate and improve tests
+## 19. Use skills to generate and improve tests
 
 ```text
 /skills
@@ -206,7 +241,13 @@ dotnet test
 cd ../..
 ```
 
-## 16. Connect MCP servers with `/mcp add`
+## 20. Explore plugins with `/plugin`
+
+```text
+/plugin
+```
+
+## 21. Connect MCP servers with `/mcp add`
 
 ```text
 /mcp
@@ -224,7 +265,7 @@ Then verify what is loaded:
 /env
 ```
 
-## 17. Connect MCP servers with config
+## 22. Connect MCP servers with config
 
 Create `.mcp.json` in the repo root:
 
@@ -254,7 +295,7 @@ Then restart Copilot:
 /env
 ```
 
-## 18. MCP prompts to demo
+## 23. MCP prompts to demo
 
 ```text
 Find the current docs for xUnit fixtures and summarize the main patterns
@@ -263,7 +304,7 @@ Go to the Playwright docs homepage and summarize what it can do
 Use Context7 to get the latest ASP.NET Core docs for dependency injection
 ```
 
-## 19. Extra commands worth showing
+## 24. Extra commands worth showing
 
 ```text
 /init
